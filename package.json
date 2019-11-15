@@ -24,7 +24,8 @@
   "bin": "lib/cli.js",
   "scripts": {
     "pretest": "eslint .",
-    "test": "jest"
+    "test": "jest",
+    "test:watch": "jest --watch"
   },
   "lint-staged": {
     "*.js": [
