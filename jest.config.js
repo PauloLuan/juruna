@@ -1,3 +1,6 @@
 module.exports = {
-  testEnvironment: 'node'
+  testEnvironment: 'node',
+  transform: {
+    '.(js|jsx|ts|tsx)': '@sucrase/jest-plugin'
+  }
 }
