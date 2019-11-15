@@ -1,0 +1,9 @@
+{
+  "generator-node": {
+    "promptValues": {
+      "authorName": "Paulo Luan",
+      "authorEmail": "pauloluan.inova@gmail.com",
+      "authorUrl": ""
+    }
+  }
+}
