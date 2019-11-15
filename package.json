@@ -24,6 +24,7 @@
   "bin": "lib/cli.js",
   "scripts": {
     "pretest": "eslint .",
+    "start": "nodemon",
     "test": "jest",
     "test:watch": "jest --watch"
   },
