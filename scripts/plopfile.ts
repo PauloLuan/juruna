@@ -2,6 +2,7 @@ import nodePlop, { ActionType } from 'node-plop'
 import shell from 'shelljs'
 import capitalize from 'lodash/capitalize'
 import camelCase from 'lodash/camelCase'
+import path from 'path'
 
 const plop = nodePlop('generators/plopfile.hbs')
 
@@ -32,13 +33,6 @@ async function createPackage() {
         type: 'input',
         name: 'description',
         message: 'The description of this component:'
-      },
-      {
-        type: 'list',
-        name: 'outDir',
-        message: 'where should this component or package live?',
-        default: 'packages',
-        choices: workspaces
       }
     ],
     actions(answers: any) {
@@ -46,13 +40,19 @@ async function createPackage() {
 
       if (!answers) return actions
 
-      const { componentName, description, outDir } = answers as Answers
+      const { componentName, description } = answers as Answers
+
+      const destinationPath = path.join(
+        __dirname,
+        '../packages/',
+        '{{dashCase componentName}}'
+      )
 
       actions.push({
         type: 'addMany',
-        templateFiles: 'component/**',
-        destination: `../${outDir}/{{dashCase componentName}}`,
-        base: 'component/',
+        templateFiles: 'package/**',
+        destination: destinationPath,
+        base: 'package/',
         data: { description, componentName },
         abortOnFail: true
       })
