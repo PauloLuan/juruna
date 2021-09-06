@@ -1,4 +1,4 @@
-## Paulo Luan's juruna (FrontEnd Monorepo)
+## juruna cli - scaffolding tool
 
 <span id="top"></span>
 
@@ -8,7 +8,6 @@
 
 <p align="center">
     <a href="https://github.com/PauloLuan/juruna/actions/workflows/ci.yml"><img src="https://img.shields.io/github/workflow/status/pauloluan/juruna/ci?style=for-the-badge"></a>
-    <a href="https://pt-br.reactjs.org/"><img src="https://img.shields.io/badge/ReactJS-17.x-blue?style=for-the-badge"></a>
     <a href="https://nodejs.org/en/"><img src="https://img.shields.io/badge/Node-16.x-green?style=for-the-badge"></a>
 </p>
 
@@ -36,12 +35,6 @@ This will start all packages in development mode in parallel
 
 ```sh
 $ yarn dev
-```
-
-If you wanna checkout the storybook components you have to run:
-
-```sh
-$ yarn storybook
 ```
 
 For unit tests:
