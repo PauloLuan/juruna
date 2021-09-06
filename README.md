@@ -1,5 +1,7 @@
 ## Paulo Luan's juruna (FrontEnd Monorepo)
 
+![Juruna Logo](.github/assets/logo.png)
+
 <span id="top"></span>
 
 <p align="center">
