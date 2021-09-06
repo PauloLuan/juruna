@@ -15,6 +15,11 @@
     "isolatedModules": true,
     "jsx": "preserve"
   },
+  "ts-node": {
+    "compilerOptions": {
+      "module": "CommonJS"
+    }
+  },
   "include": [
     "packages",
     "jest-dom/extend-expect"
