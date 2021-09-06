@@ -1,0 +1,13 @@
+import { Story, Meta } from '@storybook/react/types-6-0'
+import { {{properCase name}}, {{properCase name}}Props } from '.'
+
+export default {
+  title: 'Components/{{properCase name}}',
+  component: {{properCase name}},
+  args: {
+    color: 'black',
+    size: 'large'
+  }
+} as Meta
+
+export const Default: Story<{{properCase name}}Props> = (args) => <{{properCase name}} {...args} />

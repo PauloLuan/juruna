@@ -1,0 +1,15 @@
+import * as S from './{{pascalCase name}}.styles'
+
+export interface {{properCase name}}Props {
+  testId?: string
+}
+
+export const {{properCase name}} = ({ testId = '{{properCase name}}' }: {{properCase name}}Props) => {
+  return (
+    <S.Container>
+      <S.Wrapper data-testid={testId}>
+        <S.Main>{{properCase name}}</S.Main>
+      </S.Wrapper>
+    </S.Container>
+  )
+}

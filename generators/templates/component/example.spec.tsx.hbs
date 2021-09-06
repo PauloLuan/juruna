@@ -1,0 +1,12 @@
+import { screen } from '@testing-library/react'
+import { renderWithTheme } from '../../../utils/tests/helpers'
+
+import { {{properCase name}} } from '.'
+// import theme from '../Theme'
+
+describe('<{{properCase name}} />', () => {
+  it('should render the {{properCase name}} component and find it by Test Id', () => {
+    renderWithTheme(<{{properCase name}} testId="{{properCase name}}" />)
+    expect(screen.getByTestId(/{{properCase name}}/i)).toBeDefined()
+  })
+})
