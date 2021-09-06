@@ -1,11 +1,9 @@
 ## Paulo Luan's juruna (FrontEnd Monorepo)
 
-![Juruna Logo](.github/assets/logo.png)
-
 <span id="top"></span>
 
 <p align="center">
-    <a href="#"><img src="https://github.com/pauloluan/assets/blob/master/back.png?raw=true" width="100"></a>
+    <a href="#"><img src="https://cdn.jsdelivr.net/gh/pauloluan/juruna/.github/assets/logo.png"></a>
 </p>
 
 <p align="center">
