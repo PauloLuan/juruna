@@ -1,7 +1,7 @@
 {
-  "name": "@pauloluan/{{componentName}}",
+  "name": "@pauloluan/cli",
   "version": "1.0.0",
-  "description": "{{description}}",
+  "description": "Juruna CLI interface",
   "keywords": [],
   "author": "Paulo Luan <pauloluan.inova@gmail.com>",
   "homepage": "https://github.com/pauloluan",
@@ -26,7 +26,7 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/pauloluan/juruna.git",
-    "directory": "packages/{{componentName}}"
+    "directory": "packages/cli"
   },
   "bugs": {
     "url": "https://github.com/pauloluan/juruna/issues"
