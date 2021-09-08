@@ -1,9 +1,8 @@
 #!/usr/bin/env node
 
-import nodePlop, { ActionType } from 'node-plop'
-import shell from 'shelljs'
-import capitalize from 'lodash/capitalize'
 import camelCase from 'lodash/camelCase'
+import capitalize from 'lodash/capitalize'
+import nodePlop, { ActionType } from 'node-plop'
 import path from 'path'
 const generatorsPath = path.join(__dirname, '../../../../generators')
 
@@ -20,7 +19,7 @@ interface Answers {
   outDir: Workspace
 }
 
-async function createPackage() {
+async function createPackage(outputDir: string) {
   plop.setHelper('capitalize', (text) => {
     return capitalize(camelCase(text))
   })
@@ -46,11 +45,7 @@ async function createPackage() {
 
       const { componentName, description } = answers as Answers
 
-      const destinationPath = path.join(
-        generatorsPath,
-        '../packages/',
-        '{{dashCase componentName}}'
-      )
+      const destinationPath = path.join(outputDir, '{{dashCase componentName}}')
 
       actions.push({
         type: 'addMany',
@@ -72,8 +67,8 @@ async function createPackage() {
 }
 
 async function run() {
-  await createPackage()
-  shell.exec('yarn')
+  const OUTPUT_DIR = process.cwd()
+  await createPackage(OUTPUT_DIR)
 }
 
 run()
