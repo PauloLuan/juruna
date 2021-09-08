@@ -44,5 +44,8 @@
     "test:cov": "yarn test --coverage",
     "lint:src": "eslint src --ext .ts,.tsx --config ../../.eslintrc",
     "lint:types": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@babel/plugin-transform-runtime": "^7.15.0"
   }
 }

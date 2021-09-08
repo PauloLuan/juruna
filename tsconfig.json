@@ -21,6 +21,9 @@
     "downlevelIteration": true,
     "declarationMap": true
   },
+  "paths": {
+    "@generators/*": ["generators/*"]
+  },
   "include": ["packages", "scripts"],
   "exclude": [
     "node_modules",
