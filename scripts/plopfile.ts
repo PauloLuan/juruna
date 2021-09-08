@@ -6,7 +6,7 @@ import path from 'path'
 
 const plop = nodePlop('generators/plopfile.hbs')
 
-const workspaces = ['packages', 'packages/utils'] as const
+const workspaces = ['packages'] as const
 
 type Workspace = typeof workspaces[number]
 
@@ -50,9 +50,9 @@ async function createPackage() {
 
       actions.push({
         type: 'addMany',
-        templateFiles: 'package/**',
+        templateFiles: 'templates/package/**',
         destination: destinationPath,
-        base: 'package/',
+        base: 'templates/package/',
         data: { description, componentName },
         abortOnFail: true
       })
