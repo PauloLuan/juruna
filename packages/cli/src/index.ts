@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-import { string } from '@jest/types/node_modules/@types/yargs'
 import yargs from 'yargs'
 
 const generators = {

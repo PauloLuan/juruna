@@ -4,7 +4,7 @@ import camelCase from 'lodash/camelCase'
 import capitalize from 'lodash/capitalize'
 import nodePlop, { ActionType } from 'node-plop'
 import path from 'path'
-const generatorsPath = path.join(__dirname, '../../../../generators')
+const generatorsPath = path.join(__dirname, 'generators')
 
 const plopBase = path.join(generatorsPath, 'plopfile.hbs')
 const plop = nodePlop(plopBase)
