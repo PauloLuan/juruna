@@ -1,14 +1,19 @@
 #!/usr/bin/env node
 import yargs from 'yargs'
+import cli from './cli'
 
 const generators = {
   rc: {
     description: 'rc: React component',
-    generatorFn: () => {} //require('./cli')
+    generatorFn: () => {} //require('./react/component')
   },
   rp: {
     description: 'rp: React Project',
-    generatorFn: () => {} //require('./cli')
+    generatorFn: () => {} //require('./react/project')
+  },
+  rnc: {
+    description: 'rc: React Native component',
+    generatorFn: () => {} //require('./react-native/component')
   }
 }
 
@@ -36,9 +41,9 @@ const argv = yargs.options({
 }).argv
 
 const { type, name }: any = argv
-
-console.log('==============')
-console.log('argv :>> ', JSON.stringify({ type, name }, null, 2))
-console.log('==============')
-
 const selectedGenerator = generators[type]
+
+const IS_SELECTION_VALID = !!selectedGenerator
+if (!IS_SELECTION_VALID) throw new Error('You should select a valid config')
+
+cli({ type, name, selectedGenerator })
