@@ -44,7 +44,7 @@ async function createReactComponent(componentName: string, outputDir: string) {
   await runActions(answers)
 }
 
-export async function run(name = 'teste') {
+export async function component(name: string) {
   const OUTPUT_DIR = process.cwd()
   await createReactComponent(name, OUTPUT_DIR)
 }
