@@ -1,6 +1,9 @@
 {
   "name": "@pauloluan/juruna",
   "version": "1.0.0",
+  "publishConfig": {
+    "access": "public"
+  },
   "bin": {
     "juruna": "./packages/cli/dist/cjs/cli.js"
   },
