@@ -1,11 +1,14 @@
 {
   "name": "@pauloluan/cli",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Juruna CLI interface",
   "keywords": [],
   "author": "Paulo Luan <pauloluan.inova@gmail.com>",
   "homepage": "https://github.com/pauloluan",
   "license": "MIT",
+  "bin": {
+    "juruna": "dist/cjs/index.js"
+  },
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "types": "dist/types/index.d.ts",
