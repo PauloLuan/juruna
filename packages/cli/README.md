@@ -1,15 +1,42 @@
-# @pauloluan/cli
+## juruna cli - scaffolding tool
 
-A Quick description of the component
+<span id="top"></span>
 
-> This is a subpackage of this monorepo
+<p align="center">
+    <a href="#"><img src="https://cdn.jsdelivr.net/gh/pauloluan/juruna/.github/assets/logo.png"></a>
+</p>
 
-## Installation
+<p align="center">
+    <a href="https://github.com/PauloLuan/juruna/actions/workflows/ci.yml"><img src="https://img.shields.io/github/workflow/status/pauloluan/juruna/ci?style=for-the-badge"></a>
+    <a href="https://nodejs.org/en/"><img src="https://img.shields.io/badge/Node-16.x-green?style=for-the-badge"></a>
+</p>
+
+## 💡 Introduction
+
+Scaffolding tool to generate some utility code (monorepo subpackages, components, unit tests) for my JS, TS, React and React Native projects.
+
+## 📝 Minimal Requirements
+
+- NodeJS 14.x
+
+## 🚀 Install
 
 ```sh
-yarn add @pauloluan/cli
-
-# or
-
-npm i @pauloluan/cli
+$ npm i -g juruna
 ```
+
+## 📝 How to use
+
+Go inside the destination folder and type:
+
+```sh
+$ juruna --type rc --name yourComponentName
+```
+
+Check the option `--help` to see the examples usage.
+
+# Where you can find me? :man_technologist:
+
+[![Linkedin Badge](https://img.shields.io/badge/-LinkedIn-blue?style=for-the-badge&logo=Linkedin&logoColor=white&link=https://bit.ly/pauloluan)](https://bit.ly/pauloluan)
+
+[🔝 back to top](#top)
