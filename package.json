@@ -16,6 +16,7 @@
     "postinstall": "yarn bootstrap",
     "bootstrap": "lerna bootstrap",
     "build": "lerna run --stream build",
+    "deploy": "lerna run --stream --parallel deploy",
     "dev": "lerna run dev --stream --parallel",
     "start": "lerna run start --stream",
     "format": "eslint --fix packages --ext .js,.jsx,.ts,.tsx",

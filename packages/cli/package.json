@@ -1,6 +1,6 @@
 {
   "name": "juruna",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Juruna CLI interface",
   "keywords": [],
   "homepage": "https://github.com/pauloluan",
@@ -34,6 +34,7 @@
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "concurrently yarn:build:*",
+    "deploy": "npm publish",
     "start": "nodemon --watch src --exec yarn build -e ts,tsx",
     "test": "jest --env=jsdom --passWithNoTests",
     "lint": "concurrently yarn:lint:*",
