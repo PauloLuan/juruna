@@ -1,18 +1,19 @@
 {
-  "name": "@pauloluan/cli",
+  "name": "juruna",
   "version": "1.0.1",
   "description": "Juruna CLI interface",
   "keywords": [],
-  "author": "Paulo Luan <pauloluan.inova@gmail.com>",
   "homepage": "https://github.com/pauloluan",
-  "license": "MIT",
-  "bin": {
-    "juruna": "dist/cjs/index.js"
+  "bugs": {
+    "url": "https://github.com/pauloluan/juruna/issues"
   },
-  "main": "dist/cjs/index.js",
-  "module": "dist/esm/index.js",
-  "types": "dist/types/index.d.ts",
-  "typings": "dist/types/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pauloluan/juruna.git",
+    "directory": "packages/cli"
+  },
+  "license": "MIT",
+  "author": "Paulo Luan <pauloluan.inova@gmail.com>",
   "sideEffects": false,
   "exports": {
     ".": {
@@ -20,24 +21,20 @@
       "default": "./dist/esm/index.js"
     }
   },
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/types/index.d.ts",
+  "typings": "dist/types/index.d.ts",
+  "bin": {
+    "juruna": "dist/cjs/index.js"
+  },
   "files": [
     "dist"
   ],
-  "publishConfig": {
-    "access": "public"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/pauloluan/juruna.git",
-    "directory": "packages/cli"
-  },
-  "bugs": {
-    "url": "https://github.com/pauloluan/juruna/issues"
-  },
   "scripts": {
     "prebuild": "rimraf dist",
-    "start": "nodemon --watch src --exec yarn build -e ts,tsx",
     "build": "concurrently yarn:build:*",
+    "start": "nodemon --watch src --exec yarn build -e ts,tsx",
     "test": "jest --env=jsdom --passWithNoTests",
     "lint": "concurrently yarn:lint:*",
     "version": "yarn build",
@@ -47,5 +44,14 @@
     "test:cov": "yarn test --coverage",
     "lint:src": "eslint src --ext .ts,.tsx --config ../../.eslintrc",
     "lint:types": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.15.4",
+    "lodash": "^4.17.21",
+    "node-plop": "^0.26.2",
+    "yargs": "^17.1.1"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
