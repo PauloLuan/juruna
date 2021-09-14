@@ -6,13 +6,9 @@ const generators = {
     description: 'rc: React component',
     generatorFn: require('./generators/react').component
   },
-  rp: {
-    description: 'rp: React Project'
-    // generatorFn: require('./generators/react/project')
-  },
   rnc: {
-    description: 'rc: React Native component'
-    // generatorFn: require('./generators/react-native/component')
+    description: 'rnc: React Native component',
+    generatorFn: require('./generators/react-native').component
   }
 }
 
